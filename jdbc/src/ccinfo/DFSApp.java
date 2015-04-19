@@ -12,6 +12,10 @@ import java.util.ArrayList;
 import java.util.Set;
 import java.util.StringTokenizer;
 
+/**
+ * @author niaopeng
+ * 
+ */
 public class DFSApp {
 	public static int vertexId;
 	// 用HashMap保存单词与内存中包含该词的结点ID之间的映射关系(相当于倒排索引的功能)
