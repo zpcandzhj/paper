@@ -1,20 +1,19 @@
 package ccinfo;
 
-import java.io.BufferedReader;
 import java.io.IOException;
-import java.io.InputStreamReader;
 import java.io.StringReader;
 import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.HashSet;
 import java.util.Iterator;
-import java.util.Set;
 
 import org.apache.lucene.analysis.TokenStream;
 import org.apache.lucene.analysis.tokenattributes.CharTermAttribute;
 import org.wltea.analyzer.lucene.IKAnalyzer;
 
-//把分词结果放到hashMap中
+/**
+ * @author zhoupengcheng
+ * @version 2015年4月19日下午8:24:09
+ */
 public class IKAnalyzerHashMap {
 	// 用HashMap保存单词与内存中包含该词的结点ID之间的映射关系(相当于倒排索引的功能)
 	public static HashMap<String, ArrayList<Integer>> myHashMap = new HashMap<String, ArrayList<Integer>>();
@@ -27,7 +26,6 @@ public class IKAnalyzerHashMap {
 		// analyzer.setUseSmart(true);// 使用智能分词
 		// 打印分词结果
 		printAnalysisResult(analyzer, textToBeProcess, vertexId);
-		// new IKAnalyzerHashMap().getResultByKeyword(keyWord);
 	}
 
 	public void getResult() {
@@ -54,6 +52,7 @@ public class IKAnalyzerHashMap {
 	public ArrayList<Integer> getVertexsByKeyword(String[] keywords) {
 		ArrayList<Integer> res = myHashMap.get(keywords[0]);
 		if (res != null) {
+			@SuppressWarnings("unchecked")
 			ArrayList<Integer> temp = (ArrayList<Integer>) res.clone();
 			if (temp != null)
 				for (int i = 1; i < keywords.length; i++) {

@@ -9,12 +9,11 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
-import java.util.Set;
 import java.util.StringTokenizer;
 
 /**
- * @author niaopeng
- * 
+ * @author zhoupengcheng
+ * @version 2015年4月19日下午8:04:19
  */
 public class DFSApp {
 	public static int vertexId;
@@ -106,6 +105,7 @@ public class DFSApp {
 			e.printStackTrace();
 		}
 
+		//========================用户交互========================
 		while (true) {
 			keywords = new String[10];
 			System.out.println("请输入关键词集合,以空格分开:");

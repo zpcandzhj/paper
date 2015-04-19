@@ -6,6 +6,10 @@ import java.util.ArrayList;
  * 基于邻接矩阵(二维数组)的图结构实现
  * 采用深度优先(DFS)遍历
  */
+/**
+ * @author zhoupengcheng
+ * @version 2015年4月19日下午8:24:32
+ */
 public class Graph {
 	private final int MAX_NUM = 20000;
 	private ArrayList<Vertex> vertexList;// ArrayList保存所有结点
