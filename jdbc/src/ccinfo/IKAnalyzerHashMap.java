@@ -53,14 +53,18 @@ public class IKAnalyzerHashMap {
 	// 返回包含关键词keywords的结点ID,为AND语义查询做准备
 	public ArrayList<Integer> getVertexsByKeyword(String[] keywords) {
 		ArrayList<Integer> res = myHashMap.get(keywords[0]);
-		if (res != null)
-			for (int i = 1; i < keywords.length; i++) {
-				ArrayList<Integer> arraylist = myHashMap.get(keywords[i]);
-				if (arraylist != null)
-					res.retainAll(arraylist);
-				
-			}
-		return res;
+		if (res != null) {
+			ArrayList<Integer> temp = (ArrayList<Integer>) res.clone();
+			if (temp != null)
+				for (int i = 1; i < keywords.length; i++) {
+					ArrayList<Integer> arraylist = myHashMap.get(keywords[i]);
+					if (arraylist != null)
+						temp.retainAll(arraylist);
+
+				}
+			return temp;
+		}
+		return null;
 	}
 
 	private static void printAnalysisResult(IKAnalyzer analyzer,

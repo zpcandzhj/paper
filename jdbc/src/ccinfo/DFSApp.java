@@ -24,7 +24,7 @@ public class DFSApp {
 	public static void main(String[] args) throws IOException {
 		Graph theGraph = new Graph();
 		String tableName;
-		String[] keywords = new String[10];
+		String[] keywords = null;
 		try {
 			long begin = System.currentTimeMillis();
 			Class.forName("com.mysql.jdbc.Driver");
@@ -107,6 +107,7 @@ public class DFSApp {
 		}
 
 		while (true) {
+			keywords = new String[10];
 			System.out.println("请输入关键词集合,以空格分开:");
 			String keyWord = getString();
 			if (keyWord.equals("quit")) {
