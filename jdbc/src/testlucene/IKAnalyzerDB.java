@@ -24,7 +24,8 @@ public class IKAnalyzerDB {
 	public static void main(String[] args) throws Exception {
 
 		//String[] tables = {"rcd","rcd_item","page","inform"};
-		String[] tables = { "test" };
+		//String[] tables = { "test" };
+		String[] tables = {"rcd"};
 		new IKAnalyzerDB().ProcessData(tables);
 
 	}

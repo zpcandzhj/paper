@@ -21,7 +21,7 @@ public class ListTest {
 	public static void main(String[] args) {
 		ArrayList<String> alist = new ArrayList<String>();
 		LinkedList<String> llist = new LinkedList<String>();
-
+		System.out.println("alist.size():"+alist.size());
 		/*
 		 * 普通的add方法比较
 		 */
@@ -74,5 +74,7 @@ public class ListTest {
 		long agiend = System.currentTimeMillis();
 		System.out.println("linkedlist time get iterator:"
 				+ (agiend - agibegin));
+		
+		System.out.println("alist.size():"+alist.size());
 	}
 }

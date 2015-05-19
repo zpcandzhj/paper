@@ -3,7 +3,7 @@ package ccinfo;
 import java.util.ArrayList;
 
 /*
- * 基于邻接矩阵(二维数组)的图结构实现
+ * 基于邻接矩阵(二维数组)的无权无向图结构实现
  * 采用深度优先(DFS)遍历
  */
 /**
